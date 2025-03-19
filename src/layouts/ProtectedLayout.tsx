@@ -1,11 +1,12 @@
 import { Navigate, Outlet } from "react-router-dom";
+import Navbar from "../components/Navbar";
 
 const ProtectedLayout = () => {
   const isAuthenticated = true;
 
   return isAuthenticated ? (
     <>
-      <div>Protected Layout</div>
+      <Navbar />
       <Outlet />
     </>
   ) : (
