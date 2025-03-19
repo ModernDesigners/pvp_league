@@ -1,1 +1,33 @@
 @import "tailwindcss";
+* {
+  font-feature-settings: "case";
+}
+@font-face {
+  font-family: F_Bruno;
+  src: url("./fonts/bruno-ace/BrunoAce-Regular.ttf");
+}
+@font-face {
+  font-family: F_Tkt_Regular;
+  src: url("./fonts/tkt-geo/OnService-Regular.woff2");
+}
+@font-face {
+  font-family: F_Tkt_Bold;
+  src: url("./fonts/tkt-geo/OnService-Bold.woff2");
+}
+
+@theme {
+  --color-var-red: #ff204e;
+  --color-var-black: #1f1f1f;
+  --color-var-gray: #bfbfbf;
+  --color-var-brown: #171717;
+  --color-var-white: #fff;
+}
+body {
+  background-color: black;
+}
+.F_bruno_regular {
+  font-family: F_Bruno;
+}
+.F_tkt_regular {
+  font-family: FBruno;
+}

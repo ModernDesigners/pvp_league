@@ -1,18 +1,14 @@
-export const LogOutIcon = (props: React.SVGProps<SVGSVGElement>) => (
+export const SearchIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     width="1em"
     height="1em"
-    viewBox="0 0 24 24"
+    viewBox="0 0 20 20"
     {...props}
   >
-    <g fill="currentColor">
-      <path
-        fillRule="evenodd"
-        d="M11 20a1 1 0 0 0-1-1H5V5h5a1 1 0 1 0 0-2H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h5a1 1 0 0 0 1-1z"
-        clipRule="evenodd"
-      ></path>
-      <path d="M21.714 12.7a.996.996 0 0 0 .286-.697v-.006a.997.997 0 0 0-.293-.704l-4-4a1 1 0 1 0-1.414 1.414L18.586 11H9a1 1 0 1 0 0 2h9.586l-2.293 2.293a1 1 0 0 0 1.414 1.414l4-4l.007-.007z"></path>
-    </g>
+    <path
+      fill="currentColor"
+      d="M12.9 14.32a8 8 0 1 1 1.41-1.41l5.35 5.33l-1.42 1.42l-5.33-5.34zM8 14A6 6 0 1 0 8 2a6 6 0 0 0 0 12z"
+    ></path>
   </svg>
 );
