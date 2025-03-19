@@ -17,10 +17,16 @@
 
 @theme {
   --color-var-red: #ff204e;
-  --color-var-black: #1f1f1f;
   --color-var-gray: #bfbfbf;
-  --color-var-brown: #171717;
   --color-var-white: #fff;
+  --color-var-card: #171717;
+  --color-var-green: #00ed6b;
+  --color-var-border: rgba(255, 255, 255, 0.1);
+  --color-var-card-images: linear-gradient(
+    180deg,
+    rgba(255, 32, 78, 0) 0%,
+    var(--color-var-red) 400%
+  );
 }
 body {
   background-color: black;
@@ -30,4 +36,11 @@ body {
 }
 .F_tkt_regular {
   font-family: FBruno;
+}
+.myContainer {
+  width: 90%;
+  margin: auto;
+}
+.card-images {
+  background: var(--color-var-card-images);
 }

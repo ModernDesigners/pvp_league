@@ -1,4 +1,4 @@
-import headerBg from "/assets/homebg.webp";
+import headerBg from "/assets/headerBg.webp";
 const HomeHeaderBg = () => {
   return (
     <div className=" absolute top-0 left-0 w-full h-[900px]  ">

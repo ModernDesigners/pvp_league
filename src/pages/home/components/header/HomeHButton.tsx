@@ -1,5 +1,5 @@
 import React from "react";
-import { IHomeHButton } from "../../../../interfaces/homeHButton.interface";
+import { IHomeHButton } from "../../../../interfaces/home-header-button-interface";
 
 const HomeHButton: React.FC<IHomeHButton> = ({
   color,
