@@ -3,17 +3,23 @@ import ArtistImages from "./ArtistImages";
 import BattleInfo from "./BattleInfo";
 import EventButtons from "./EventButtons";
 
-const EventCard: React.FC = () => {
+function EventCard(props: { active?: boolean }) {
   return (
-    <div className="h-[175px] bg-var-card rounded-md flex justify-between overflow-hidden ">
-      <div className="w-[50%] h-full flex">
+    <div
+      className={`h-[175px] ${
+        props.active
+          ? "bg-main-clear hover:bg-main-clear-hover"
+          : "bg-var-card hover:bg-var-card-hover"
+      } rounded-md flex justify-between overflow-hidden transition-colors duration-300  `}
+    >
+      <div className="w-[70%] h-full flex">
         <ArtistImages />
-        <BattleInfo />
+        <BattleInfo active={props.active} />
       </div>
 
       <EventButtons />
     </div>
   );
-};
+}
 
 export default EventCard;

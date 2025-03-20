@@ -8,14 +8,10 @@ const ParticipantInfo: React.FC<IParticipantRecord> = ({
   totalBattles,
 }) => {
   return (
-    <div className="flex justify-around px-10items-center text-center">
-      <ParticipantInfoText
-        amount={totalBattles}
-        color="var-white"
-        title="ბეთლი"
-      />
-      <ParticipantInfoText amount={win} color="var-green" title="მოგება" />
-      <ParticipantInfoText amount={loose} color="var-red" title="წაგება" />
+    <div className="flex justify-around px-10 items-center text-center mt-4">
+      <ParticipantInfoText amount={totalBattles} title="ბეთლი" />
+      <ParticipantInfoText amount={win} title="მოგება" />
+      <ParticipantInfoText amount={loose} title="წაგება" />
     </div>
   );
 };

@@ -1,6 +1,29 @@
 @import "tailwindcss";
-* {
-  font-feature-settings: "case";
+@theme {
+  --color-bodybg: #0e0e0e;
+  --color-main: #ff204e;
+  --color-main-clear: rgba(255, 32, 77, 0.1);
+  --color-main-clear-hover: rgba(255, 32, 77, 0.15);
+  --color-yellow-clear: rgba(255, 166, 32, 0.1);
+  --color-var-red: #ff204e;
+  --color-var-gray: #bfbfbf;
+  --color-var-white: #fff;
+  --color-var-card: #171717;
+  --color-var-card-hover: #1b1b1b;
+  --color-var-green: #00ed6b;
+  --color-head: rgba(255, 255, 255, 0.9);
+  --color-desc: rgba(222, 222, 222, 0.4);
+  --color-var-border: rgba(255, 255, 255, 0.1);
+  --font-bruno: "F_Bruno", sans-serif;
+  --font-tkt-regular: "F_Tkt_Regular";
+  --font-tkt-medium: "F_Tkt_Medium";
+  --font-tkt-semibold: "F_Tkt_SemiBold";
+  --font-tkt-bold: "F_Tkt_Bold";
+  --color-var-card-images: linear-gradient(
+    180deg,
+    rgba(255, 32, 78, 0) 0%,
+    var(--color-var-red) 400%
+  );
 }
 @font-face {
   font-family: F_Bruno;
@@ -11,36 +34,44 @@
   src: url("./fonts/tkt-geo/OnService-Regular.woff2");
 }
 @font-face {
+  font-family: F_Tkt_Medium;
+  src: url("./fonts/tkt-geo/OnService-Medium.woff2");
+}
+@font-face {
+  font-family: F_Tkt_SemiBold;
+  src: url("./fonts/tkt-geo/OnService-SemiBold.woff2");
+}
+@font-face {
   font-family: F_Tkt_Bold;
   src: url("./fonts/tkt-geo/OnService-Bold.woff2");
 }
 
-@theme {
-  --color-var-red: #ff204e;
-  --color-var-gray: #bfbfbf;
-  --color-var-white: #fff;
-  --color-var-card: #171717;
-  --color-var-green: #00ed6b;
-  --color-var-border: rgba(255, 255, 255, 0.1);
-  --color-var-card-images: linear-gradient(
-    180deg,
-    rgba(255, 32, 78, 0) 0%,
-    var(--color-var-red) 400%
-  );
-}
 body {
-  background-color: black;
+  background-color: var(--color-bodybg);
+  font-feature-settings: "case";
+  font-family: var(--font-tkt-medium);
+  letter-spacing: 0.5px;
 }
-.F_bruno_regular {
-  font-family: F_Bruno;
-}
-.F_tkt_regular {
-  font-family: FBruno;
-}
+
 .myContainer {
   width: 90%;
   margin: auto;
 }
 .card-images {
   background: var(--color-var-card-images);
+}
+.nav_link_hover::before {
+  content: "";
+  background-color: var(--color-main);
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  width: 100%;
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.4s ease;
+}
+
+.nav_link_hover:hover::before {
+  transform: scaleX(1);
 }

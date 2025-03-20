@@ -1,6 +1,6 @@
 const AuthButo = () => {
   return (
-    <button className="bg-var-red px-10 py-2 rounded-sm text-var-white cursor-pointer ">
+    <button className="bg-main px-7 py-1.5 rounded-sm text-head cursor-pointer ">
       ავტორიზაცია
     </button>
   );

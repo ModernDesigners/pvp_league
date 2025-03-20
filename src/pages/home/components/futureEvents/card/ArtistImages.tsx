@@ -1,11 +1,19 @@
 import React from "react";
-import pele from "/assets/pele.png";
-import nikki from "/assets/nikki.png";
+import pele from "/assets/characters/pele.png";
+import nikki from "/assets/characters/nikki.png";
 const ArtistImages: React.FC = () => {
   return (
-    <div className="w-[50%] h-full flex items-center justify-between  card-images ">
-      <img src={pele} alt="Pele" className=" h-[90%] w-[40%] mt-auto " />
-      <img src={nikki} alt="Nikki" className=" h-[90%] w-[40%] mt-auto " />
+    <div className="w-[50%] max-w-[450px] h-full flex items-center justify-evenly  card-images border-b-2 border-b-main">
+      <img
+        src={pele}
+        alt="Pele"
+        className=" h-auto max-h-[80%] max-w-[40%] mt-auto "
+      />
+      <img
+        src={nikki}
+        alt="Nikki"
+        className=" h-auto max-h-[80%] max-w-[40%] mt-auto "
+      />
     </div>
   );
 };
