@@ -1,4 +1,3 @@
-import React from "react";
 import ArtistImages from "./ArtistImages";
 import BattleInfo from "./BattleInfo";
 import EventButtons from "./EventButtons";

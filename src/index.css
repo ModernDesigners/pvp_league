@@ -1,6 +1,8 @@
 @import "tailwindcss";
 @theme {
   --color-bodybg: #0e0e0e;
+  --color-bodybg-70: #0e0e0ea6;
+  --color-bodybg-40: #0e0e0e75;
   --color-main: #ff204e;
   --color-main-clear: rgba(255, 32, 77, 0.1);
   --color-main-clear-hover: rgba(255, 32, 77, 0.15);
@@ -15,6 +17,7 @@
 
   --color-head: rgba(255, 255, 255, 0.9);
   --color-desc: rgba(222, 222, 222, 0.4);
+  --color-desc-h: rgba(222, 222, 222, 0.6);
   --color-var-border: rgba(255, 255, 255, 0.1);
   --font-bruno: "F_Bruno", sans-serif;
   --font-tkt-regular: "F_Tkt_Regular";
@@ -76,4 +79,19 @@ body {
 
 .nav_link_hover:hover::before {
   transform: scaleX(1);
+}
+.shadow_down::before {
+  content: "";
+  background: linear-gradient(
+    to bottom,
+    var(--color-bodybg-40),
+    var(--color-bodybg-70),
+    var(--color-bodybg)
+  );
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
 }

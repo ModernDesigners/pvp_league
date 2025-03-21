@@ -1,6 +1,6 @@
 import React from "react";
-import pele from "/assets/characters/pele.png";
-import nikki from "/assets/characters/nikki.png";
+import pele from "/assets/participants/pele.png";
+import nikki from "/assets/participants/nikki.png";
 const ArtistImages: React.FC = () => {
   return (
     <div className="w-[50%] max-w-[450px] h-full flex items-center justify-evenly  card-images border-b-2 border-b-main">

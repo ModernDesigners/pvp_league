@@ -5,14 +5,17 @@ import { IParticipantInfoText } from "../../interfaces/participant-info-text-int
 const ParticipantInfoText: React.FC<IParticipantInfoText> = ({
   title,
   amount,
+  large,
 }) => {
   switch (title) {
   }
   return (
     <div>
-      <p className="text-var-gray F_tkt_regular text-sm">{title}</p>
+      <p className={`text-desc F_tkt_regular ${large ? "text-lg" : "text-sm"}`}>
+        {title}
+      </p>
       <p
-        className={`mt-1 font-bruno ${clsx({
+        className={`mt-1 font-bruno  ${large ? "text-lg" : "text-sm"} ${clsx({
           "text-green-500": title == "მოგება",
           "text-yellow-500": title == "ბეთლი",
           "text-red-500": title == "წაგება",

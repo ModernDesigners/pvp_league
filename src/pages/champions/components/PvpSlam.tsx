@@ -1,9 +1,9 @@
 import React from "react";
 import ParticipantCard from "../../../components/participantCard/ParticipantCard";
 import HeaderText from "../../../components/HeaderText";
-import pele from "/assets/characters/pele.png";
-import nikki from "/assets/characters/nikki.png";
-import bxnny from "/assets/characters/bxnny.png";
+import pele from "/assets/participants/pele.png";
+import nikki from "/assets/participants/nikki.png";
+import bxnny from "/assets/participants/bxnny.png";
 const PvpSlam: React.FC = () => {
   return (
     <div className="py-4">
