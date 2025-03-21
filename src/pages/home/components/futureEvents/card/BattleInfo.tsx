@@ -11,7 +11,7 @@ const BattleInfo: React.FC<IPrevBattlesInfo> = ({
 
   return (
     <div className="h-full flex gap-5">
-      <div className="px-10 h-full flex flex-col justify-between py-6 border-r border-var-border">
+      <div className="px-10 h-full flex flex-col justify-between py-6 border-r border-var-border  w-[350px]">
         <h1 className="font-bruno text-var-white">
           {currentArtist} VS {enemyArtist}
         </h1>

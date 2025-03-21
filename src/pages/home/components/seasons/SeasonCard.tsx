@@ -1,9 +1,14 @@
 import { ISeasonInfo } from "../../../../API/SeasonsAPI";
+import { useParticipantPage } from "../../../../hooks/useParticipantPage";
 
-export default function SeasonCard({ id, title, image, date }: ISeasonInfo) {
-  console.log(id, title, image, date);
+export default function SeasonCard({ id, title, image }: ISeasonInfo) {
+  const goToProfile = useParticipantPage();
+
   return (
-    <div className="relative flex-1 w-full min-w-[45%] h-[170px] bg-var-card p-5 text-head text-lg overflow-hidden cursor-pointer group">
+    <div
+      className="relative flex-1 w-full min-w-[45%] h-[170px] bg-var-card p-5 text-head text-lg overflow-hidden cursor-pointer group"
+      onClick={() => goToProfile(`/seasons/${id}`)}
+    >
       <h2 className="relative z-10 backface-hidden">
         <span className="text-main">{title.substring(0, 1)}</span>
         {title.substring(1)}

@@ -10,7 +10,6 @@ export default function ParticipantHeader(props: {
   return (
     <div className="h-screen min-h-[800px] flex  items-center myContainer ">
       <DecorBg image={headerBg} />
-
       <div className="MyContainer relative z-[5] w-full">
         <div className="flex items-stretch w-full">
           <Pimage />

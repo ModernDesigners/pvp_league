@@ -14,6 +14,7 @@ export default function ParticipantBody(props: {
           enemyArtist="NIKKI SLOW"
           win={true}
           isFutureEvent={false}
+          isTransparentBg
         />
         <EventCard
           battleDate="12 აპრილი"
@@ -21,6 +22,7 @@ export default function ParticipantBody(props: {
           enemyArtist="GROTASK"
           win={false}
           isFutureEvent={false}
+          isTransparentBg
         />
         <EventCard
           battleDate="22 აპრილი"
@@ -28,6 +30,7 @@ export default function ParticipantBody(props: {
           enemyArtist="GROTASK"
           win={false}
           isFutureEvent={false}
+          isTransparentBg
         />
       </div>
     </div>

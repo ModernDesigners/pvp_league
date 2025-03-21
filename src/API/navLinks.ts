@@ -10,8 +10,8 @@ export const navLinks: INavLink[] = [
     linkTo: "/",
   },
   {
-    title: "ევენთები",
-    linkTo: "/",
+    title: "სეზონები",
+    linkTo: "/seasons/1",
   },
   {
     title: "ჩემპიონები",

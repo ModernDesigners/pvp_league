@@ -2,12 +2,20 @@ import React from "react";
 import ParticipantImage, { IParticipantImg } from "./ParticipantImage";
 import { IParticipantRecord } from "../../interfaces/participant-info-record";
 import ParticipantInfo from "./ParticipantInfo";
+import { useParticipantPage } from "../../hooks/useParticipantPage";
 
 const ParticipantCard: React.FC<
   IParticipantImg & IParticipantRecord & { name: string }
 > = ({ image, name, win, loose, totalBattles, championsList, belts }) => {
+  const goToProfile = useParticipantPage();
+  const handleGoToPofile = () => {
+    goToProfile(`/participant/${name.toLowerCase()}`);
+  };
   return (
-    <div className="py-6 w-[300px] bg-[#ffffff0a]  flex flex-col transition-transform cursor-pointer duration-500 hover:-translate-y-2  hover:shadow-main-clear will-change-transform relative z-10 overflow-hidden backface-hidden">
+    <div
+      className="py-6 w-[300px] bg-[#ffffff0a]  flex flex-col transition-transform cursor-pointer duration-500 hover:-translate-y-2  hover:shadow-main-clear will-change-transform relative z-10 overflow-hidden backface-hidden"
+      onClick={() => handleGoToPofile()}
+    >
       <ParticipantImage championsList={championsList} image={image} />
       <div className=" h-full flex flex-col gap-2">
         <div
