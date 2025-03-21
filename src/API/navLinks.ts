@@ -2,7 +2,7 @@ import { INavLink } from "../interfaces/nav-link-interface";
 
 export const navLinks: INavLink[] = [
   {
-    title: "მონაწილეები",
+    title: "მთავარი",
     linkTo: "/",
   },
   {

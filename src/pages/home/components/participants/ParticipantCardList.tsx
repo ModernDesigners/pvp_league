@@ -1,8 +1,8 @@
 import React from "react";
-import ParticipantCard from "./ParticipantCard";
 import pele from "/assets/characters/pele.png";
 import nikki from "/assets/characters/nikki.png";
 import bxnny from "/assets/characters/bxnny.png";
+import ParticipantCard from "../../../../components/participantCard/ParticipantCard";
 
 const ParticipantCardList: React.FC = () => {
   return (
