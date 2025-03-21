@@ -9,13 +9,13 @@ const ParticipantCard: React.FC<
   return (
     <div className="py-6 w-[300px] bg-[#ffffff0a]  flex flex-col transition-transform cursor-pointer duration-500 hover:-translate-y-2  hover:shadow-main-clear will-change-transform relative z-10 overflow-hidden backface-hidden">
       <ParticipantImage championsList={championsList} image={image} />
-      <div className=" h-full flex flex-col gap-2 ">
+      <div className=" h-full flex flex-col gap-2">
         <div
           className={`flex items-center  myContainer  ${
             championsList ? "h-20" : "h-15"
           }  ${championsList ? "justify-between" : "justify-center"}`}
         >
-          <p className=" text-head font-bruno tracking-wider uppercase">
+          <p className="text-head font-bruno tracking-wider uppercase">
             {name}
           </p>
           {championsList && (

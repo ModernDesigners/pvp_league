@@ -5,13 +5,30 @@ export default function ParticipantBody(props: {
 }) {
   return (
     <div ref={props.roundsDiv} className="MyContainer">
-      <h2 className="text-desc-h text-2xl tracking-wider">რაუნდები</h2>
+      <h2 className="text-desc-h text-2xl tracking-wider">წინა ბეთლები</h2>
 
       <div className="flex flex-col gap-5 py-5">
-        <EventCard active />
-        <EventCard />
-        <EventCard />
-        <EventCard />
+        <EventCard
+          battleDate="22 აპრილი"
+          currentArtist="PELE"
+          enemyArtist="NIKKI SLOW"
+          win={true}
+          isFutureEvent={false}
+        />
+        <EventCard
+          battleDate="12 აპრილი"
+          currentArtist="PELE"
+          enemyArtist="GROTASK"
+          win={false}
+          isFutureEvent={false}
+        />
+        <EventCard
+          battleDate="22 აპრილი"
+          currentArtist="PELE"
+          enemyArtist="GROTASK"
+          win={false}
+          isFutureEvent={false}
+        />
       </div>
     </div>
   );

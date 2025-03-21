@@ -6,8 +6,6 @@ import Login from "./pages/login/Login";
 import Participant from "./pages/participant/Participant";
 
 const Router = () => {
-  const isAuthenticated = true;
-
   return (
     <BrowserRouter>
       <Routes>
@@ -19,10 +17,7 @@ const Router = () => {
 
         <Route path="/login" element={<Login />} />
 
-        <Route
-          path="*"
-          element={<Navigate to={isAuthenticated ? "/" : "/login"} />}
-        />
+        <Route path="*" element={<Navigate to={"/"} />} />
       </Routes>
     </BrowserRouter>
   );

@@ -1,24 +1,34 @@
+import React from "react";
 import ArtistImages from "./ArtistImages";
 import BattleInfo from "./BattleInfo";
 import EventButtons from "./EventButtons";
+import { IArtistsPrevBattlesWinner } from "../../../../../interfaces/artist-profile-prevbattles-interface";
+import { IPrevBattlesInfo } from "../../../../../interfaces/prev-battles-info-interface";
 
-function EventCard(props: { active?: boolean }) {
+const EventCard: React.FC<IArtistsPrevBattlesWinner & IPrevBattlesInfo> = ({
+  battleDate,
+  currentArtist,
+  enemyArtist,
+  win,
+  isFutureEvent,
+}) => {
   return (
     <div
-      className={`h-[175px] ${
-        props.active
-          ? "bg-main-clear hover:bg-main-clear-hover"
-          : "bg-var-card hover:bg-var-card-hover"
-      } rounded-md flex justify-between overflow-hidden transition-colors duration-300  `}
+      className={`h-[175px] 
+      rounded-md flex justify-between overflow-hidden transition-colors duration-300 mb-4`}
     >
       <div className="w-[70%] h-full flex">
-        <ArtistImages />
-        <BattleInfo active={props.active} />
+        <ArtistImages win={win} isFutureEvent={isFutureEvent} />
+        <BattleInfo
+          battleDate={battleDate}
+          currentArtist={currentArtist}
+          enemyArtist={enemyArtist}
+        />
       </div>
 
       <EventButtons />
     </div>
   );
-}
+};
 
 export default EventCard;
