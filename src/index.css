@@ -15,6 +15,7 @@
   --color-var-green: #00ed6b;
   --color-var-yellow: #ffb820;
 
+  --color-button-hover: rgba(255, 255, 255, 0.05);
   --color-head: rgba(255, 255, 255, 0.9);
   --color-desc: rgba(222, 222, 222, 0.4);
   --color-desc-h: rgba(222, 222, 222, 0.6);

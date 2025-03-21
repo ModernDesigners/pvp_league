@@ -1,9 +1,12 @@
+import { log } from "console";
 import MyButton from "../../../components/MyButton";
 import ParticipantInfoText from "../../../components/participantCard/ParticipantInfoText";
 import headerBg from "/assets/images/headerBg.webp";
 import pele from "/assets/participants/pele.png";
 
-export default function ParticipantHeader() {
+export default function ParticipantHeader(props: {
+  roundsDiv: React.RefObject<HTMLDivElement | null>;
+}) {
   return (
     <div className="h-screen min-h-[800px] flex  items-center myContainer ">
       <DecorBg image={headerBg} />
@@ -11,7 +14,7 @@ export default function ParticipantHeader() {
       <div className="MyContainer relative z-[5] w-full">
         <div className="flex items-stretch w-full">
           <Pimage />
-          <Pinfo />
+          <Pinfo roundsDiv={props.roundsDiv} />
         </div>
       </div>
     </div>
@@ -32,7 +35,10 @@ function Pimage() {
   );
 }
 
-function Pinfo() {
+function Pinfo(props: { roundsDiv: React.RefObject<HTMLDivElement | null> }) {
+  const scrollToRounds = () => {
+    props.roundsDiv.current?.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <div className="flex flex-col gap-5 max-w-[400px] w-2/4">
       <h1 className="text-head font-bruno uppercase text-2xl md:text-3xl lg:text-4xl tracking-wider">
@@ -44,7 +50,7 @@ function Pinfo() {
           <ParticipantInfoText large amount={"8"} title="მოგება" />
           <ParticipantInfoText large amount={"4"} title="წაგება" />
         </div>
-        <MyButton color="head" title="რაუნდების ნახვა" />
+        <MyButton click={scrollToRounds} color="head" title="რაუნდების ნახვა" />
       </div>
     </div>
   );
