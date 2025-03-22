@@ -20,6 +20,10 @@
   --color-comment-bg: #1a1a1a;
   --color-comment-profile: #242424;
 
+  --color-input-bg: #1a1a1a;
+  --color-input-hover: #202020;
+  --color-input-focus: #252525;
+
   --color-button-like: #181818;
   --color-button-like-hover: #222222;
 
@@ -61,6 +65,15 @@
   font-family: F_Tkt_Bold;
   src: url("./fonts/tkt-geo/OnService-Bold.woff2");
 }
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
 *::selection {
   color: var(--color-head);
   background: var(--color-main);
@@ -78,6 +91,7 @@ body {
   font-feature-settings: "case";
   font-family: var(--font-tkt-medium);
   letter-spacing: 0.5px;
+  color: var(--color-head);
 }
 
 .myContainer {

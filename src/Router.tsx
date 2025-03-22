@@ -6,6 +6,7 @@ import Login from "./pages/login/Login";
 import Participant from "./pages/participant/Participant";
 import Seasons from "./pages/seasons/Seasons";
 import Watch from "./pages/watch/Watch";
+import Admin from "./pages/admin/admin";
 
 const Router = () => {
   return (
@@ -14,6 +15,7 @@ const Router = () => {
         <Route path="/" element={<ProtectedLayout />}>
           <Route index element={<HomePage />} />
           <Route path="/champions" element={<ChampionsPage />} />
+          <Route path="/admin" element={<Admin />} />
           <Route path="/participant/:id" element={<Participant />} />
           <Route path="/seasons/:season" element={<Seasons />} />
           <Route path="/watch/:id" element={<Watch />} />
