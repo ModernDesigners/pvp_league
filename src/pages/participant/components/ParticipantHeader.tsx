@@ -1,4 +1,3 @@
-import { log } from "console";
 import MyButton from "../../../components/MyButton";
 import ParticipantInfoText from "../../../components/participantCard/ParticipantInfoText";
 import headerBg from "/assets/images/headerBg.webp";
@@ -55,9 +54,9 @@ function Pinfo(props: { roundsDiv: React.RefObject<HTMLDivElement | null> }) {
   );
 }
 
-function DecorBg(props: { image: string }) {
+export function DecorBg(props: { image: string }) {
   return (
-    <div className=" absolute top-0 left-0 w-full h-full shadow_down">
+    <div className=" absolute top-0 left-0 w-full h-full shadow_down select-none">
       <img
         className="w-full h-full object-cover brightness-50 "
         src={props.image}

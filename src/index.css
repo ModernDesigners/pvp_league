@@ -15,9 +15,19 @@
   --color-var-green: #00ed6b;
   --color-var-yellow: #ffb820;
 
+  --color-comments-bg: #141414;
+  --color-comments-border: rgba(255, 255, 255, 0.05);
+  --color-comment-bg: #1a1a1a;
+  --color-comment-profile: #242424;
+
+  --color-button-like: #181818;
+  --color-button-like-hover: #222222;
+
   --color-button-hover: rgba(255, 255, 255, 0.05);
   --color-head: rgba(255, 255, 255, 0.9);
-  --color-desc: rgba(222, 222, 222, 0.4);
+  --color-head2: rgba(255, 255, 255, 0.7);
+  --color-desc: rgba(222, 222, 222, 0.5);
+  --color-desc2: rgba(222, 222, 222, 0.4);
   --color-desc-h: rgba(222, 222, 222, 0.6);
   --color-var-border: rgba(255, 255, 255, 0.1);
   --font-bruno: "F_Bruno", sans-serif;
@@ -50,6 +60,17 @@
 @font-face {
   font-family: F_Tkt_Bold;
   src: url("./fonts/tkt-geo/OnService-Bold.woff2");
+}
+*::selection {
+  color: var(--color-head);
+  background: var(--color-main);
+}
+*::-webkit-scrollbar {
+  width: 6px;
+  background: var(--color-bodybg);
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--color-main);
 }
 
 body {
