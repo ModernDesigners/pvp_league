@@ -6,7 +6,7 @@ import Login from "./pages/login/Login";
 import Participant from "./pages/participant/Participant";
 import Seasons from "./pages/seasons/Seasons";
 import Watch from "./pages/watch/Watch";
-import Admin from "./pages/admin/admin";
+import Admin from "./pages/admin/Admin";
 
 const Router = () => {
   return (

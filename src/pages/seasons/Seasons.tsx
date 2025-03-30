@@ -1,18 +1,25 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useParams } from "react-router";
-import EventCard from "../home/components/futureEvents/card/EventCard";
 import SeasonsBackground from "./SeasonsBackground";
 import Final from "./Final";
 import QuarterFinal from "./QuarterFinal";
 import Qualify from "./Qualify";
+import SeasonsHeader from "./SeasonsHeader";
 const Seasons: React.FC = () => {
   const { season } = useParams();
+  const [currentSeason, setCurrentSeason] = useState<number>();
+  useEffect(() => {
+    setCurrentSeason(Number(season));
+  }, [season]);
+  console.log(currentSeason);
+
   return (
     <div className="py-40 myContainer ">
       <SeasonsBackground />
-      <h1 className="text-6xl relative font-bruno text-var-white">
-        <span className="text-var-red">Se</span>ason {season}
-      </h1>
+      <SeasonsHeader
+        season={currentSeason}
+        setCurrentSeason={setCurrentSeason}
+      />
       <Final />
       <QuarterFinal />
       <Qualify />
