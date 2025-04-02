@@ -11,15 +11,11 @@ const Seasons: React.FC = () => {
   useEffect(() => {
     setCurrentSeason(Number(season));
   }, [season]);
-  console.log(currentSeason);
 
   return (
     <div className="py-40 myContainer ">
       <SeasonsBackground />
-      <SeasonsHeader
-        season={currentSeason}
-        setCurrentSeason={setCurrentSeason}
-      />
+      <SeasonsHeader season={currentSeason} />
       <Final />
       <QuarterFinal />
       <Qualify />

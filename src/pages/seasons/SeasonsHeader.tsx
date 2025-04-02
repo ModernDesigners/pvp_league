@@ -2,13 +2,9 @@ import React from "react";
 import MyButton from "../../components/MyButton";
 import { useNavigate } from "react-router";
 interface ISeasonHeader {
-  setCurrentSeason: Function;
   season: number | undefined;
 }
-const SeasonsHeader: React.FC<ISeasonHeader> = ({
-  season,
-  setCurrentSeason,
-}) => {
+const SeasonsHeader: React.FC<ISeasonHeader> = ({ season }) => {
   const navigate = useNavigate();
   const nextSeason = () => {
     console.log(season);

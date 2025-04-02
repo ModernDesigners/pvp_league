@@ -9,43 +9,58 @@ export interface ISeasonInfo {
   title: string;
   image: string;
   date: string;
+  seasonTitle: string;
+}
+interface ISeasons {
+  pvp_flow: ISeasonInfo[];
+  acappela: ISeasonInfo[];
 }
 
-export const SeasonsAPI: ISeasonInfo[] = [
-  {
-    id: 1,
-    title: "სეზონი 1",
-    image: season_1_image,
-    date: "2021-01-01",
-  },
-  {
-    id: 2,
-    title: "სეზონი 2",
-    image: season_2_image,
-    date: "2021-01-01",
-  },
-  {
-    id: 3,
-    title: "სეზონი 3",
-    image: season_3_image,
-    date: "2021-01-01",
-  },
-  {
-    id: 4,
-    title: "სეზონი 4",
-    image: season_4_image,
-    date: "2021-01-01",
-  },
-  {
-    id: 5,
-    title: "სეზონი 5",
-    image: season_5_image,
-    date: "2021-01-01",
-  },
-  {
-    id: 6,
-    title: "სეზონი 6",
-    image: season_6_image,
-    date: "2021-01-01",
-  },
-];
+export const SeasonsAPI: ISeasons = {
+  pvp_flow: [
+    {
+      id: 1,
+      title: "სეზონი 1",
+      image: season_1_image,
+      date: "2021-01-01",
+      seasonTitle: "PvP Flow",
+    },
+    {
+      id: 2,
+      title: "სეზონი 2",
+      image: season_2_image,
+      date: "2021-01-01",
+      seasonTitle: "PvP Flow",
+    },
+    {
+      id: 3,
+      title: "სეზონი 3",
+      image: season_3_image,
+      date: "2021-01-01",
+      seasonTitle: "PvP Flow",
+    },
+  ],
+  acappela: [
+    {
+      id: 1,
+      title: "სეზონი 1",
+      image: season_4_image,
+      date: "2021-01-01",
+      seasonTitle: "Acappela",
+    },
+    {
+      id: 2,
+      title: "სეზონი 2",
+      image: season_5_image,
+      date: "2021-01-01",
+      seasonTitle: "Acappela",
+    },
+    {
+      id: 3,
+      title: "სეზონი 3",
+      image: season_6_image,
+      date: "2021-01-01",
+      seasonTitle: "Acappela",
+    },
+  ],
+};
